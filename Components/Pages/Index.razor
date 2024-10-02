@@ -4,13 +4,13 @@
 <PageTitle>The Truth Hurts.me</PageTitle>
 
 <div class="container">
-    <div style="display: flex; gap: 1rem; align-items:  center">
+    <div class="title">
         <h1>The Truth Hurts.me</h1>
     </div>
 
     <div class="form">
         <label>Spotify Playlist URL</label>
-        <input name="spotify-playlist" type="text" @bind="_spotifyUrl"/>
+        <input name="spotify-playlist" type="text" @bind="_spotifyUrl" placeholder="https://open.spotify.com/playlist/37i9dQZEVXbJPcfkRz0wJ0"/>
         <button @onclick="HurtThemAsync" disabled="@_slanderInProgress">Hurt Me</button>
 
         @if (!string.IsNullOrWhiteSpace(_status))
@@ -34,4 +34,11 @@
             </div>
         }
     </div>
+</div>
+<div class="footer">
+    <div>Copyright 2024 &copy;</div>
+    <div>•</div>
+    <a href="https://github.com/lewpar/TheTruthHurtsMe">GitHub</a>
+    <div>•</div>
+    <div>Made with ♥ using OpenAI & SpotifyAPI</div>
 </div>

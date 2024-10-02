@@ -6,19 +6,38 @@
     
     align-items: center;
     justify-content: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
     
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    gap: 0.5rem;
     
-    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 1rem;
+    
+    padding: 1rem;
+}
+
+.title {
+    display: flex; 
+    
+    gap: 1rem; 
+    
+    align-items: center;
+    justify-content: center;
 }
 
 .form {
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column;
+    
+    width: 50%;
     
     gap: 0.5rem;
-    
-    width: 70ch;
     
     padding: 1rem;
 }
@@ -32,6 +51,12 @@
     border-radius: 5px;
     
     padding: 0.5rem;
+}
+
+a {
+    color: white;
+    
+    text-decoration: underline;
 }
 
 button {
@@ -53,4 +78,14 @@ button:active {
 }
 button:disabled {
     filter: grayscale(100%);
+}
+
+@media (max-width: 800px) {
+    .container {
+        align-items: stretch;
+    }
+    
+    .form {
+        width: unset;
+    }
 }
