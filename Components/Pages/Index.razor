@@ -10,7 +10,7 @@
 
     <div class="form">
         <label>Spotify Playlist URL</label>
-        <input id="spotify-playlist" type="text" @bind="_spotifyUrl"/>
+        <input name="spotify-playlist" type="text" @bind="_spotifyUrl"/>
         <button @onclick="HurtThemAsync" disabled="@_slanderInProgress">Hurt Me</button>
 
         @if (!string.IsNullOrWhiteSpace(_status))
