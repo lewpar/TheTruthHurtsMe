@@ -1,0 +1,37 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>The Truth Hurts.me</PageTitle>
+
+<div class="container">
+    <div style="display: flex; gap: 1rem; align-items:  center">
+        <h1>The Truth Hurts.me</h1>
+    </div>
+
+    <div class="form">
+        <label>Spotify Playlist URL</label>
+        <input id="spotify-playlist" type="text" @bind="_spotifyUrl"/>
+        <button @onclick="HurtThemAsync" disabled="@_slanderInProgress">Hurt Me</button>
+
+        @if (!string.IsNullOrWhiteSpace(_status))
+        {
+            <div style="color: dodgerblue">
+                @_status
+            </div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(_error))
+        {
+            <div style="color: red">
+                @_error
+            </div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(_slander))
+        {
+            <div class="slander">
+                @_slander
+            </div>
+        }
+    </div>
+</div>
