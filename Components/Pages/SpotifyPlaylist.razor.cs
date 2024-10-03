@@ -22,7 +22,7 @@ public partial class SpotifyPlaylist : ComponentBase
 
     private bool _analysisInProgress;
 
-    private string _systemMessage = "I am going to give you a bunch of songs in the format {{artist:song_name}}. Create an analysis on my personality based off these songs/artists and create a summary of at least two paragraphs. Here is my playlist: ";
+    private string _systemMessage = "I am going to give you a bunch of songs in the format {{artist:song_name}}. Create an analysis on my personality based off these songs/artists and create a summary of at least two paragraphs. Make sure to write [NEWLINE] when you are starting a new paragraph. Here is my playlist: ";
 
     private async Task AnalyzeAsync()
     {
@@ -101,7 +101,7 @@ public partial class SpotifyPlaylist : ComponentBase
             var response = await GPTService.PromptAsync(sb.ToString(), _systemMessage);
 
             _status = "";
-            await TypeResponseAsync(response);
+            await TypeResponseAsync(response.Replace("[NEWLINE]", "\n").Trim());
         }
         catch (Exception)
         {

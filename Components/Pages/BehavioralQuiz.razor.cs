@@ -86,10 +86,10 @@ public partial class BehavioralQuiz : ComponentBase
             sb.AppendLine($"{choice.Key.Prompt}{choice.Value},");
         }
         
-        var analysis = await GPTService.PromptAsync(sb.ToString(), "I want you to do a deep behavioral analysis of me. Do not repeat the information I am about to tell you and instead give me new information.: ");
+        var analysis = await GPTService.PromptAsync(sb.ToString(), "I want you to do a deep behavioral analysis of me. Do not repeat the information I am about to tell you and instead give me new information. Make sure to write [NEWLINE] when you are starting a new paragraph: ");
         _analysisComplete = true;
 
-        await TypeResponseAsync(analysis);
+        await TypeResponseAsync(analysis.Replace("[NEWLINE]", "\n").Trim());
     }
     
     private async Task TypeResponseAsync(string response)

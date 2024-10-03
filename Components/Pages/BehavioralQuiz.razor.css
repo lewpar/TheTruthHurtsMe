@@ -80,6 +80,7 @@
     flex-direction: column;
     
     gap: 0.5rem;
+    padding: 1rem;
     
     width: 50%;
 }
@@ -93,6 +94,8 @@
     
     padding: 0.5rem;
     margin: 0;
+    
+    font-size: 0.8rem;
 }
 
 @media (max-width: 800px) {

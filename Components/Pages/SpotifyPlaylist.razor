@@ -15,7 +15,7 @@
 
             @if (!string.IsNullOrWhiteSpace(_status))
             {
-                <div style="color: dodgerblue">
+                <div>
                     @_status
                 </div>
             }
@@ -29,9 +29,9 @@
 
             @if (!string.IsNullOrWhiteSpace(_analysis))
             {
-                <div class="analysis">
+                <p class="analysis">
                     @_analysis
-                </div>
+                </p>
             }
         </div>
     </div>
