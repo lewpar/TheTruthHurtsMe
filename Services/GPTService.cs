@@ -6,19 +6,16 @@ namespace TheTruthHurtsMe.Services;
 
 public class GPTService
 {
-    public string SystemMessage { get; set; }
-    
     private ChatClient _chatClient;
 
     public GPTService(string apiKey, string model = "gpt-3.5-turbo")
     {
-        SystemMessage = "You are a helpful AI assistant.";
         _chatClient = new ChatClient(model: model, apiKey: apiKey);
     }
     
-    public async Task<string> PromptAsync(string prompt)
+    public async Task<string> PromptAsync(string prompt, string systemMessage = "You are a helpful AI assistant.")
     {
-        var result = await _chatClient.CompleteChatAsync($"{SystemMessage} {prompt}");
+        var result = await _chatClient.CompleteChatAsync($"{systemMessage} {prompt}");
         var completion = result.Value;
 
         var sb = new StringBuilder();

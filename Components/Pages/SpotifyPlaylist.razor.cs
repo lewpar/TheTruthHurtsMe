@@ -22,6 +22,8 @@ public partial class SpotifyPlaylist : ComponentBase
 
     private bool _analysisInProgress;
 
+    private string _systemMessage = "I am going to give you a bunch of songs in the format {{artist:song_name}}. Create an analysis on my personality based off these songs/artists and create a summary of at least two paragraphs. Here is my playlist: ";
+
     private async Task AnalyzeAsync()
     {
         if (_analysisInProgress)
@@ -96,7 +98,7 @@ public partial class SpotifyPlaylist : ComponentBase
 
             await Task.Delay(2000);
 
-            var response = await GPTService.PromptAsync(sb.ToString());
+            var response = await GPTService.PromptAsync(sb.ToString(), _systemMessage);
 
             _status = "";
             await TypeResponseAsync(response);

@@ -44,10 +44,7 @@ public class Program
 
         var openApiKey = DotEnv.Get("OPENAPI_KEY");
         
-        services.AddSingleton(new GPTService(openApiKey)
-        {
-            SystemMessage = "I am going to give you a bunch of songs in the format {{artist:song_name}}. Create an analysis on my personality based off these songs/artists and create a summary of at least two paragraphs. Here is my playlist: "
-        });
+        services.AddSingleton(new GPTService(openApiKey));
         
         var spotifyClientId = DotEnv.Get("SPOTIFY_ID");
         var spotifySecret = DotEnv.Get("SPOTIFY_SECRET");
