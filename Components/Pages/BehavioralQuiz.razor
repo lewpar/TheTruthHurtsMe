@@ -3,13 +3,49 @@
 
 <div class="background">
     <div class="container">
-        @if (!_quizStarted)
+        @if (!string.IsNullOrWhiteSpace(_error))
         {
-            <button @onclick="StartQuiz">Start Quiz</button>
+            <div style="color: red">@_error</div>
         }
         else
         {
-            <div>Hello World!</div>
+            @if (!_quizStarted)
+            {
+                <button @onclick="StartQuiz">Start Quiz</button>
+            }
+            else
+            {
+                if (_currentQuestion is not null)
+                {
+                    <div class="quiz">
+                        <div class="question">@_currentQuestion.Question</div>
+                        <div class="question-count">@_questions?.Count question(s) left</div>
+
+                        <div class="choices">
+                            @foreach (var choice in _currentQuestion.Choices)
+                            {
+                            <div class="choice" @onclick="async () => await StoreChoiceAsync(_currentQuestion, choice)">@choice</div>
+                            }
+                        </div>
+                    </div>
+                }
+                else if (_currentQuestion is null && _quizCompleted)
+                {
+                    if (_analysisComplete)
+                    {
+                        <div class="results">
+                            <div style="font-weight: bold; font-size: 1.25rem">Results</div>
+                            <p class="analysis">@_analysis</p>
+                            
+                            <button @onclick="StartQuiz" disabled="@_isTypingAnalysis">Restart Quiz</button>
+                        </div>
+                    }
+                    else
+                    {
+                        <div>Quiz complete, analyzing results..</div>
+                    }
+                }
+            }   
         }
     </div>
 </div>

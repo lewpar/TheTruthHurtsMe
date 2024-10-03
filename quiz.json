@@ -1,0 +1,183 @@
+﻿[
+  {
+    "Question": "What’s your go-to way of handling stress?",
+    "Prompt": "My go-to way of handling stress is: ",
+    "Choices": [
+      "Talking it out with a friend.",
+      "Diving into a hobby or distraction.",
+      "Taking a nap or doing something relaxing.",
+      "Facing it head-on and getting it done."
+    ]
+  },
+  {
+    "Question": "What would you do if you found a wallet on the street?",
+    "Prompt": "If I found a wallet on the street I would: ",
+    "Choices": [
+      "Return it to the owner, no hesitation.",
+      "Take it to the nearest authority.",
+      "Check for cash but leave it otherwise.",
+      "Keep it, finders keepers!"
+    ]
+  },
+  {
+    "Question": "Would you prefer a life full of adventure and uncertainty or stability and comfort?",
+    "Prompt": "Between living a life full of adventure and uncertainty or stability and comfort I prefer: ",
+    "Choices": [
+      "Adventure, always.",
+      "A mix of both.",
+      "Stability.",
+      "I create my own excitement in the small things."
+    ]
+  },
+  {
+    "Question": "How do you usually express affection to people you care about?",
+    "Prompt": "The way I usually express affection to people I care about is: ",
+    "Choices": [
+      "By spending quality time with them.",
+      "Through physical affection like hugs.",
+      "By helping them out with tasks or favors.",
+      "Through gifts or thoughtful gestures."
+    ]
+  },
+  {
+    "Question": "In group projects or activities, what role do you usually take?",
+    "Prompt": "In group projects/activies the role I usually take is: ",
+    "Choices": [
+      "The leader, organizing and assigning tasks.",
+      "The mediator, ensuring everyone is heard.",
+      "The behind-the-scenes contributor.",
+      "The wildcard, adding creative or unexpected ideas."
+    ]
+  },
+  {
+    "Question": "When faced with a difficult decision, how do you make your choice?",
+    "Prompt": "When faced with a difficult decision: ",
+    "Choices": [
+      "I follow my gut instinct.",
+      "I weigh the pros and cons carefully.",
+      "I ask for advice from others.",
+      "I wait and see how things unfold."
+    ]
+  },
+  {
+    "Question": "If you could instantly learn one skill, what would it be?",
+    "Prompt": "If I could instantly learn one skill it would be: ",
+    "Choices": [
+      "Something practical, like a new language.",
+      "Something creative, like painting or music.",
+      "Something that could advance my career.",
+      "Something fun or quirky, like magic tricks."
+    ]
+  },
+  {
+    "Question": "Imagine you’re tasked with solving a mystery. How do you approach it?",
+    "Prompt": "If I was tasked with a mystery I would: ",
+    "Choices": [
+      "Gather all the evidence first.",
+      "Talk to everyone involved and listen for clues.",
+      "Follow your intuition and jump to conclusions.",
+      "Look for patterns and connections no one else sees."
+    ]
+  },
+  {
+    "Question": "How do you handle a situation where things aren’t going as planned?",
+    "Prompt": "When things arent going as planned I: ",
+    "Choices": [
+      "Adapt quickly and come up with a new plan.",
+      "Stay calm and follow through with the original idea.",
+      "Get frustrated but eventually work it out.",
+      "Laugh it off and go with the flow."
+    ]
+  },
+  {
+    "Question": "If you could live in any fictional universe, where would it be?",
+    "Prompt": "If I could live in any fiction universe it would be: ",
+    "Choices": [
+      "A magical world full of wizards and dragons.",
+      "A futuristic sci-fi world with advanced technology.",
+      "A peaceful utopia where everything is perfect.",
+      "A chaotic, unpredictable place where anything can happen."
+    ]
+  },
+  {
+    "Question": "What’s your ideal way to spend a Sunday?",
+    "Prompt": "My ideal way to spend a Sunday is: ",
+    "Choices": [
+      "Binge-watching a new TV series.",
+      "Going on a spontaneous adventure.",
+      "Reading or doing something creative.",
+      "Hanging out with friends or family."
+    ]
+  },
+  {
+    "Question": "What kind of role do you prefer in video games or stories?",
+    "Prompt": "The role I prefer in video games or stories is: ",
+    "Choices": [
+      "The hero who saves the day.",
+      "The strategist who plans everything.",
+      "The wildcard who causes chaos for fun.",
+      "The support, quietly making sure everything goes well."
+    ]
+  },
+  {
+    "Question": "Are you more of a morning person or a night owl?",
+    "Prompt": "In terms of being a morning person or night owl I prefer: ",
+    "Choices": [
+      "Morning person all the way.",
+      "Night owl, I thrive at night.",
+      "Neither, I function better mid-day.",
+      "Depends on the day and my mood."
+    ]
+  },
+  {
+    "Question": "When it comes to snacks, do you prefer sweet or salty?",
+    "Prompt": "When it comes to salty vs sweet snacks I prefer: ",
+    "Choices": [
+      "Sweet, always.",
+      "Salty all the way.",
+      "A perfect balance of both.",
+      "I’m more of a savory fan."
+    ]
+  },
+  {
+    "Question": "What’s your favorite way to unwind after a long day?",
+    "Prompt": "My favorite way to unwind after a long day is: ",
+    "Choices": [
+      "Reading a book or watching TV.",
+      "Playing video games.",
+      "Going for a walk or exercising.",
+      "Cooking or baking something.",
+      "Spending time with friends or family."
+    ]
+  },
+  {
+    "Question": "What’s something you’ve learned about yourself in the past year?",
+    "Prompt": "One thing I have learned about myself in the past year is: ",
+    "Choices": [
+      "I’m more resilient than I thought.",
+      "I’m still figuring things out.",
+      "I need to make more time for what I love.",
+      "I’m happier when I let go of control."
+    ]
+  },
+  {
+    "Question": "What’s a personal trait you’re most proud of?",
+    "Prompt": "The personal trait I am most proud of is: ",
+    "Choices": [
+      "My creativity.",
+      "My empathy.",
+      "My resilience.",
+      "My sense of humor."
+    ]
+  },
+  {
+    "Question": "If you could give your younger self one piece of advice, what would it be?",
+    "Prompt": "",
+    "Choices": [
+      "Don’t sweat the small stuff.",
+      "Take more risks.",
+      "Trust yourself more.",
+      "Enjoy the moment, don’t rush."
+    ]
+  }
+]

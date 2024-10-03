@@ -52,5 +52,9 @@ public class Program
         var spotifyService = new SpotifyService();
         await spotifyService.InitializeAsync(spotifyClientId, spotifySecret);
         services.AddSingleton(spotifyService);
+
+        var quizService = new QuizService();
+        await quizService.LoadQuizAsync();
+        services.AddSingleton(quizService);
     }
 }

@@ -24,3 +24,71 @@
     animation-duration: 1s;
     animation-fill-mode: both;
 }
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 0.5rem;
+    
+    width: 50%;
+}
+
+.question {
+    font-weight: bold;
+}
+.quesiton-count {
+    font-size: 0.75rem;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 0.5rem;
+}
+
+.choice {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    
+    padding: 0.5rem;
+    
+    cursor: pointer;
+    user-select: none;
+}
+.choice:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 0.5rem;
+    
+    width: 50%;
+}
+
+.analysis {
+    white-space: pre-wrap;
+    
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    
+    padding: 0.5rem;
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .quiz {
+        width: 80%;
+    }
+    
+    .results {
+        width: 80%;
+    }
+}
