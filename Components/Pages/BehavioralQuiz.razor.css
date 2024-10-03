@@ -25,6 +25,18 @@
     animation-fill-mode: both;
 }
 
+.title {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.disclaimer {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 0.5rem;
+}
+
 .quiz {
     display: flex;
     flex-direction: column;

@@ -3,6 +3,8 @@
 
 <div class="background">
     <div class="container">
+        <a href="/" class="back">←</a>
+        
         @if (!string.IsNullOrWhiteSpace(_error))
         {
             <div style="color: red">@_error</div>
@@ -11,7 +13,11 @@
         {
             @if (!_quizStarted)
             {
-                <button @onclick="StartQuiz">Start Quiz</button>
+                <div class="disclaimer">
+                    <div class="title">Personality Quiz</div>
+                    <div>By pressing the button below you agree to share non-identifiable information about yourself.</div>
+                    <button @onclick="StartQuiz">Start Quiz</button>
+                </div>
             }
             else
             {
@@ -19,12 +25,12 @@
                 {
                     <div class="quiz">
                         <div class="question">@_currentQuestion.Question</div>
-                        <div class="question-count">@_questions?.Count question(s) left</div>
+                        <div class="question-count">@(_questions?.Count + 1) question(s) left</div>
 
                         <div class="choices">
                             @foreach (var choice in _currentQuestion.Choices)
                             {
-                            <div class="choice" @onclick="async () => await StoreChoiceAsync(_currentQuestion, choice)">@choice</div>
+                                <div class="choice" @onclick="async () => await StoreChoiceAsync(_currentQuestion, choice)">@choice</div>
                             }
                         </div>
                     </div>
@@ -36,7 +42,7 @@
                         <div class="results">
                             <div style="font-weight: bold; font-size: 1.25rem">Results</div>
                             <p class="analysis">@_analysis</p>
-                            
+
                             <button @onclick="StartQuiz" disabled="@_isTypingAnalysis">Restart Quiz</button>
                         </div>
                     }
@@ -45,7 +51,7 @@
                         <div>Quiz complete, analyzing results..</div>
                     }
                 }
-            }   
+            }
         }
     </div>
 </div>
