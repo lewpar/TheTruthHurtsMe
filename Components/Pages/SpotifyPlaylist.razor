@@ -1,0 +1,36 @@
+﻿@page "/Spotify"
+@rendermode InteractiveServer
+
+<div class="background">
+    <div class="container">
+        <div class="form">
+            <div class="title">
+                Enter a playlist link to analyze
+                <div class="disclaimer">Results may be inaccurate for unknown/indie artists.</div>
+            </div>
+            <input name="spotify-playlist" type="text" @bind="_spotifyUrl" placeholder="https://open.spotify.com/playlist/37i9dQZEVXbJPcfkRz0wJ0"/>
+            <button @onclick="AnalyzeAsync" disabled="@_analysisInProgress">Analyze</button>
+
+            @if (!string.IsNullOrWhiteSpace(_status))
+            {
+                <div style="color: dodgerblue">
+                    @_status
+                </div>
+            }
+
+            @if (!string.IsNullOrWhiteSpace(_error))
+            {
+                <div style="color: red">
+                    @_error
+                </div>
+            }
+
+            @if (!string.IsNullOrWhiteSpace(_analysis))
+            {
+                <div class="analysis">
+                    @_analysis
+                </div>
+            }
+        </div>
+    </div>
+</div>

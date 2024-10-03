@@ -3,8 +3,25 @@ main {
     
     display: flex;
     flex-direction: column;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+
+    gap: 0.5rem;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 1rem;
+
+    padding: 1rem;
     
-    backdrop-filter: blur(10px);
+    border-top: 1px solid rgb(50, 50, 50);
+    background-color: rgb(20, 20, 20);
 }
 
 #blazor-error-ui {

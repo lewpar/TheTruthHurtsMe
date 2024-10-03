@@ -1,44 +1,28 @@
 ﻿@page "/"
 @rendermode InteractiveServer
 
-<PageTitle>The Truth Hurts.me</PageTitle>
-
-<div class="container">
-    <div class="title">
+<div class="background">
+    <div class="container">
         <h1>The Truth Hurts.me</h1>
+        
+        <div class="items">
+            <a class="item" href="/Spotify">
+                <div class="name">
+                    Spotify
+                </div>
+                <div class="description">
+                    Get an analysis based on your music choices
+                </div>
+            </a>
+
+            <a class="item" href="/Quiz">
+                <div class="name">
+                    Quiz
+                </div>
+                <div class="description">
+                    Answer a 30 question quiz and receive a behavioral analysis
+                </div>
+            </a>
+        </div>
     </div>
-
-    <div class="form">
-        <label>Spotify Playlist URL</label>
-        <input name="spotify-playlist" type="text" @bind="_spotifyUrl" placeholder="https://open.spotify.com/playlist/37i9dQZEVXbJPcfkRz0wJ0"/>
-        <button @onclick="HurtThemAsync" disabled="@_slanderInProgress">Hurt Me</button>
-
-        @if (!string.IsNullOrWhiteSpace(_status))
-        {
-            <div style="color: dodgerblue">
-                @_status
-            </div>
-        }
-
-        @if (!string.IsNullOrWhiteSpace(_error))
-        {
-            <div style="color: red">
-                @_error
-            </div>
-        }
-
-        @if (!string.IsNullOrWhiteSpace(_slander))
-        {
-            <div class="slander">
-                @_slander
-            </div>
-        }
-    </div>
-</div>
-<div class="footer">
-    <div>Copyright 2024 &copy;</div>
-    <div>•</div>
-    <a href="https://github.com/lewpar/TheTruthHurtsMe">GitHub</a>
-    <div>•</div>
-    <div>Made with ♥ using OpenAI & SpotifyAPI</div>
 </div>

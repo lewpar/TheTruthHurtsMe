@@ -1,8 +1,9 @@
 ﻿.background {
     flex: 1;
-    display: flex;
     
-    background-image: url('/bg-1.png');
+    display: flex;
+
+    background-image: url('/bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,54 +11,64 @@
 
 .container {
     flex: 1;
-    
+
     display: flex;
     flex-direction: column;
-    
+
     align-items: center;
     justify-content: center;
-
+    
     animation-name: fade-in;
     animation-duration: 1s;
     animation-fill-mode: both;
 }
 
-.items {
-    display: flex;
-    flex-direction: row;
-    
-    gap: 0.5rem;
-    
-    align-items: center;
-    justify-content: center;
-    
-    flex-wrap: wrap;
-}
-
-.item {
+.title {
     display: flex;
     flex-direction: column;
+
+    gap: 0.1rem;
+
+    align-items: start;
+    justify-content: center;
     
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.disclaimer {
+    font-weight: normal;
+    font-size: 0.6rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+.analysis {
+    font-size: 0.75rem;
+
     background-color: rgba(0, 0, 0, 0.25);
-    
+
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 5px;
-    
-    text-decoration: none;
-    
-    padding: 1rem;
-    
-    transition: background-color 0.25s, border 0.25s;
-}
-.item:hover {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
+
+    padding: 0.5rem;
 }
 
-.item .name {
-    font-weight: bold;
-}
+@media (max-width: 800px) {
+    .container {
+        align-items: stretch;
+    }
 
-.item .description {
-    max-width: 50ch;
+    .form {
+        width: unset;
+    }
 }

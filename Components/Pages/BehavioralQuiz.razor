@@ -1,0 +1,15 @@
+﻿@page "/Quiz"
+@rendermode InteractiveServer
+
+<div class="background">
+    <div class="container">
+        @if (!_quizStarted)
+        {
+            <button @onclick="StartQuiz">Start Quiz</button>
+        }
+        else
+        {
+            <div>Hello World!</div>
+        }
+    </div>
+</div>
