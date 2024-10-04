@@ -86,17 +86,25 @@ public partial class BehavioralQuiz : ComponentBase
             sb.AppendLine($"{choice.Key.Prompt}{choice.Value},");
         }
         
-        var analysis = await GPTService.PromptAsync(sb.ToString(), "I want you to do a deep behavioral analysis of me. Do not repeat the information I am about to tell you and instead give me new information. Make sure to write [NEWLINE] when you are starting a new paragraph: ");
+        var thoughtsSystemMsg = "I want you to do a deep behavioral analysis of me and give me a bullet point list of your thoughts based on this information: ";
+        var thoughts = await GPTService.PromptAsync(sb.ToString(), thoughtsSystemMsg);
+
+        var connectionsSystemMsg = "Now take list of thoughts and find connections between them.";
+        var connections = await GPTService.PromptAsync(connectionsSystemMsg, $"{thoughtsSystemMsg}{thoughts}");
+        
+        var analysisSystemMsg = "Create a basic report of your thoughts and analysis of me. Do not include markdown or headers. Keep the information to a maximum of few paragraphs.";
+        var analysis = await GPTService.PromptAsync(analysisSystemMsg, $"{thoughtsSystemMsg}{thoughts}{connectionsSystemMsg}{connections}");
+        
         _analysisComplete = true;
 
-        await TypeResponseAsync(analysis.Replace("[NEWLINE]", "\n").Trim());
+        await TypeResponseAsync($"{analysis.Trim()}");
     }
     
     private async Task TypeResponseAsync(string response)
     {
         _isTypingAnalysis = true;
         
-        int msPerCharacter = 20;
+        int msPerCharacter = 10;
         foreach (var character in response)
         {
             _analysis += character;
